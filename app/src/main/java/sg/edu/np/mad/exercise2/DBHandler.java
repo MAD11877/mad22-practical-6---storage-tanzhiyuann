@@ -11,7 +11,7 @@ import java.util.ArrayList;
 public class DBHandler extends SQLiteOpenHelper {
 
 
-    private static final int DATABASE_VERSION = 6;
+    private static final int DATABASE_VERSION = 2;
     private static final String DATABASE_NAME = "practical6DB.db";
 
     public static final String TABLE_USER = "User";
@@ -24,7 +24,7 @@ public class DBHandler extends SQLiteOpenHelper {
 
 
     public DBHandler(Context context){
-        super(context,"practical6.db",null,1);
+        super(context,"practical6.db",null,2);
     }
 
 
@@ -73,12 +73,13 @@ public class DBHandler extends SQLiteOpenHelper {
         Cursor cursor = db.rawQuery(querySelectAll, null);
 
         while (cursor.moveToNext()) {
-            user user = new user();
-            user.id = cursor.getInt((int) cursor.getColumnIndex(COLUMN_ID));
-            user.name = cursor.getString(2);
-            user.description = cursor.getString(3);
-            user.followed =  cursor.getInt(4) != 0;
+            user user = new user("hi","hi",1,true);
+            user.id = cursor.getInt(0);
+            user.name = cursor.getString(1);
+            user.description = cursor.getString(2);
+            user.followed =  cursor.getInt(3) != 0;
             users.add(user);
+            /*users.add(new user(cursor.getString(1), cursor.getString(2), cursor.getInt(0), Boolean.parseBoolean(cursor.getString(3))));*/
         }
 
 

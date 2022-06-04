@@ -13,9 +13,6 @@ public class user {
         this.followed = f;
     }
 
-    public user(){
-
-    }
 
 
 }

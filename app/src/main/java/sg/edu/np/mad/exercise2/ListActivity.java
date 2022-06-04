@@ -55,23 +55,27 @@ public class ListActivity extends AppCompatActivity {
                                         alert.show();
                                     }
         });*/
-
+        ArrayList<user> userList = new ArrayList<user>();
         DBHandler dbHandler = new DBHandler(this);
         for (int i = 0; i < 20; i++){
             int r1 = rand.nextInt();
             int r2 = rand.nextInt();
 
-            boolean followed = rand.nextBoolean();
-
+            boolean followed = false;
+            if((r2 - r1) > 0 ){
+                followed  = true;
+            }
 
             user u = new user("Name" + r1, "description" + r2, r1, followed );
+            userList.add(u);
             dbHandler.addUser(u);
 
-        }
 
-        ArrayList<user> userList = dbHandler.getUsers();
+        }
+        ArrayList<user> userLIST = dbHandler.getUsers();
+
         RecyclerView rv = findViewById(R.id.recyclerView);
-        MsgsAdapterjava adapter = new MsgsAdapterjava(userList);
+        MsgsAdapterjava adapter = new MsgsAdapterjava(userLIST);
         LinearLayoutManager layout = new LinearLayoutManager(this);
 
         rv.setLayoutManager(layout);

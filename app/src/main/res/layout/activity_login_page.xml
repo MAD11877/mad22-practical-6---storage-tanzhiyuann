@@ -28,7 +28,8 @@
         android:minHeight="48dp"
         app:layout_constraintBaseline_toBaselineOf="@+id/labelUsername"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/labelUsername" />
+        app:layout_constraintStart_toEndOf="@+id/labelUsername"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/labelUsername"
@@ -61,7 +62,8 @@
         android:inputType="textPassword"
         android:minHeight="48dp"
         app:layout_constraintBaseline_toBaselineOf="@+id/labelPassword"
-        app:layout_constraintEnd_toEndOf="@+id/editTextUsername" />
+        app:layout_constraintEnd_toEndOf="@+id/editTextUsername"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
         android:id="@+id/buttonLogin"

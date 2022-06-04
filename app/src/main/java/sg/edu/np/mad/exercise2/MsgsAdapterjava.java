@@ -19,18 +19,20 @@ public class MsgsAdapterjava
     ArrayList<user> data;
 
 
-    public MsgsAdapterjava(ArrayList<user> data) { this.data = data; }
+    public MsgsAdapterjava(ArrayList<user> data) {
+        this.data = data; }
     @NonNull
     @Override
 
     public MsgViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View item = null;
-        if(viewType == 1)
+        if(viewType == 1) {
             item = LayoutInflater.from(parent.getContext())
                     .inflate(R.layout.activity_list1, null, false);
-
-        else
-            item = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_list2, parent,false);
+        }
+        else {
+            item = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_list2, parent, false);
+        }
         return new MsgViewHolder(item);
     }
 
@@ -41,6 +43,7 @@ public class MsgsAdapterjava
 
         String description = data.get(position).description;
         holder.description.setText(description);
+
         Boolean followed = data.get(position).followed;
 
         holder.icon.setOnClickListener(new View.OnClickListener(){
@@ -85,6 +88,7 @@ public class MsgsAdapterjava
 
     @Override
     public int getItemCount(){
+
         return data.size();
     }
 }
