@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "795701806837",
+    "project_id": "practical-6-fire",
+    "storage_bucket": "practical-6-fire.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:795701806837:android:87f50c83e2dc039fdbe7bc",
+        "android_client_info": {
+          "package_name": "sg.edu.np.mad.exercise2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "795701806837-d7qsaq915u4mi1ehbmuamlv9sdk9s455.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWSANNWdpFQ9jU5baFtfoYabNE3Ze9Tgw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "795701806837-d7qsaq915u4mi1ehbmuamlv9sdk9s455.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
